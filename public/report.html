@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>WebGuard Report</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>WebGuard</h1>
+        <p>Security Assessment Report</p>
+    </header>
+
+    <main>
+
+        <section class="report-header">
+
+            <div class="report-info">
+
+                <h2 id="reportUrl">
+                    Security Report
+                </h2>
+
+                <p id="reportDate"></p>
+
+            </div>
+
+            <button
+                id="backButton"
+                class="secondary-button"
+            >
+                New Scan
+            </button>
+
+        </section>
+
+        <section class="score-panel">
+
+            <div class="score-main">
+
+                <div class="score-circle">
+
+                    <div id="score">
+                        --
+                    </div>
+
+                    <span>
+                        SECURITY SCORE
+                    </span>
+
+                </div>
+
+                <div class="score-details">
+
+                    <div id="rating">
+                        --
+                    </div>
+
+                    <p id="summary">
+                        --
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="statistics">
+
+            <div class="stat-card">
+
+                <span class="stat-number" id="passedCount">
+                    0
+                </span>
+
+                <span class="stat-label">
+                    Checks Passed
+                </span>
+
+            </div>
+
+            <div class="stat-card">
+
+                <span class="stat-number" id="failedCount">
+                    0
+                </span>
+
+                <span class="stat-label">
+                    Checks Failed
+                </span>
+
+            </div>
+
+            <div class="stat-card">
+
+                <span class="stat-number high" id="highCount">
+                    0
+                </span>
+
+                <span class="stat-label">
+                    High Issues
+                </span>
+
+            </div>
+
+            <div class="stat-card">
+
+                <span class="stat-number medium" id="mediumCount">
+                    0
+                </span>
+
+                <span class="stat-label">
+                    Medium Issues
+                </span>
+
+            </div>
+
+            <div class="stat-card">
+
+                <span class="stat-number low" id="lowCount">
+                    0
+                </span>
+
+                <span class="stat-label">
+                    Low Issues
+                </span>
+
+            </div>
+
+        </section>
+
+        <section class="report-sections">
+
+            <button
+                class="report-section"
+                id="breakdownButton"
+                type="button"
+            >
+
+                <div>
+                    <h2>
+                        Score Breakdown
+                    </h2>
+
+                    <p>
+                        See how your security score was calculated.
+                    </p>
+                </div>
+
+                <span class="section-arrow">
+                    ›
+                </span>
+
+            </button>
+
+            <div
+                class="report-content"
+                id="breakdownContent"
+            >
+                <div id="breakdown"></div>
+            </div>
+
+            <button
+                class="report-section"
+                id="checksButton"
+                type="button"
+            >
+
+                <div>
+                    <h2>
+                        Security Checks
+                    </h2>
+
+                    <p>
+                        View the results of each security check.
+                    </p>
+                </div>
+
+                <span class="section-arrow">
+                    ›
+                </span>
+
+            </button>
+
+            <div
+                class="report-content"
+                id="checksContent"
+            >
+                <div id="checks"></div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="report.js"></script>
+
+</body>
+
+</html>
